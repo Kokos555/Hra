@@ -64,5 +64,16 @@ namespace TestProject1
             int y = 0;
             Assert.AreEqual(80, y);
         }
+        [TestMethod]
+        public void Specialization_POSITIVE()
+        {
+            string[] classes = { "Kouzelnik", "Berserker", "Inženýr", "Cizák" };
+            string name_of_class = "Kouzelnik";
+
+            for (int i = 0; i < classes.Length; i++)
+            {
+                
+            }
+        }
     }
 }
