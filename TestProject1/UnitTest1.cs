@@ -121,7 +121,59 @@ namespace TestProject1
 
             Assert.IsTrue(xp <= level * 100);
         }
-
-
+        enum Oblicej
+        {
+            velky_nos,
+            usoplesk,
+            make_up
+        }
+        [TestMethod]
+        public void Oblicej_POSITIVE()
+        {
+            int oblicej = (int)Oblicej.velky_nos;
+            Assert.AreEqual(oblicej, 0);
+        }
+        [TestMethod]
+        public void Oblicej_NEGATIVE()
+        {
+            int oblicej = (int)Oblicej.velky_nos;
+            Assert.AreEqual(oblicej, 5);
+        }
+        enum Vlasy
+        {
+            drdol,
+            culik,
+            pleska
+        }
+        [TestMethod]
+        public void Vlasy_POSITIVE()
+        {
+            int vlasy = (int)Vlasy.drdol;
+            Assert.AreEqual(vlasy, 0);
+        }
+        [TestMethod]
+        public void Vlasy_NEGATIVE()
+        {
+            int vlasy = (int)Vlasy.pleska;
+            Assert.AreEqual(vlasy, 5);
+        }
+        enum Barva_vlasu
+        {
+            kastanova,
+            blond,
+            cervena
+        }
+        [TestMethod]
+        public void Barva_vlasu_POSITIVE()
+        {
+            int barva = (int)Barva_vlasu.kastanova;
+            Assert.AreEqual(barva, 0);
+        }
+        [TestMethod]
+        public void Barva_vlasu_NEGATIVE()
+        {
+            int barva = (int)Barva_vlasu.kastanova;
+            Assert.AreEqual(barva, 5);
+        }
     }
 }
