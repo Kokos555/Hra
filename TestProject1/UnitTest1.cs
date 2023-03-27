@@ -67,13 +67,61 @@ namespace TestProject1
         [TestMethod]
         public void Specialization_POSITIVE()
         {
-            string[] classes = { "Kouzelnik", "Berserker", "Inženýr", "Cizák" };
+            string[] classes = { "Kouzelnik", "Berserker", "Inzenyr", "Cizak" };
             string name_of_class = "Kouzelnik";
 
             for (int i = 0; i < classes.Length; i++)
             {
-                
+                if (classes[i] == name_of_class)
+                {
+                    Assert.AreEqual(classes[i], name_of_class);
+                }
             }
         }
+        [TestMethod]
+        public void Specialization_NEGATIVE()
+        {
+            string[] classes = { "Kouzelnik", "Berserker", "Inzenyr", "Cizak" };
+            string name_of_class = "Berserker";
+
+            for (int i = 0; i < classes.Length; i++)
+            {
+                if (classes[i] == name_of_class)
+                {
+                    Assert.AreNotEqual(classes[i], name_of_class);
+                }
+            }
+        }
+        [TestMethod]
+        public void XP_NEGATIVE()
+        {
+            int xp = 0;
+            Assert.AreEqual(80, xp);
+        }
+        [TestMethod]
+        public void XP_POSITIVE()
+        {
+            int xp = 0;
+            Assert.AreEqual(0, xp);
+        }
+
+        [TestMethod]
+        public void Pridej_XP_POSITIVE()
+        {
+            int level = 2;
+            int xp = 100;
+
+            Assert.IsTrue(xp <= level * 100);
+        }
+        [TestMethod]
+        public void Pridej_XP_NEGATIVE()
+        {
+            int level = 2;
+            int xp = 800;
+
+            Assert.IsTrue(xp <= level * 100);
+        }
+
+
     }
 }
